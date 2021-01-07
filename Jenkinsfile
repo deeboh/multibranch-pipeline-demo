@@ -93,10 +93,6 @@ pipeline {
                 sh """
                 echo "LTIP 4"
                 """
-
-                sh """
-                echo "post-LTIP"
-                """
             }
         }
 
