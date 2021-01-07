@@ -66,4 +66,39 @@ pipeline {
         }
 
     }   
+    
+            stage('Performance Test Deployed Code') {
+            when {
+                branch 'develop'
+            }
+            steps {
+                sh """
+                echo "pre-LTIP"
+                """
+
+                sh """
+                echo "LTIP 1"
+                """
+            }
+           steps {
+                sh """
+                echo "LTIP 2"
+                """
+
+                sh """
+                echo "LTIP 3"
+                """
+            }
+          steps {
+                sh """
+                echo "LTIP 4"
+                """
+
+                sh """
+                echo "post-LTIP"
+                """
+            }
+        }
+
+    }
 }
